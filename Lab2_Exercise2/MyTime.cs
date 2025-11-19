@@ -1,6 +1,6 @@
-﻿namespace Lab2
+﻿namespace Lab2_Exercise2
 {
-    class MyTime
+    public class MyTime
     {
         private int hours;
         private int minutes;

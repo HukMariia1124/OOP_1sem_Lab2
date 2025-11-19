@@ -1,5 +1,5 @@
 ﻿using System.Text;
-namespace Lab2
+namespace Lab2_Exercise2
 {
     internal class Program
     {
