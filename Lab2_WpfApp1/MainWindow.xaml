@@ -209,5 +209,78 @@
                 </Grid>
             </ScrollViewer>
         </TabItem>
+        <TabItem Name ="MyTime" Header="MyTime">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel VerticalAlignment="Top">
+                    <TextBlock Name="Time" Text="0:00:00" HorizontalAlignment="Center" FontWeight="ExtraBold" FontSize="40"></TextBlock>
+                    <Grid>
+                        <Ellipse Width="600" Height="600" Stroke="Black" StrokeThickness="4"/>
+                        <Canvas Name="DialCanvas" Width="600" Height="600" IsHitTestVisible="False"/>
+
+                        <Rectangle Name="HourHand" Width="6" Height="150" Fill="Black" Margin="0,0,0,150"
+                           RenderTransformOrigin="0.5,1">
+                            <Rectangle.RenderTransform>
+                                <RotateTransform Angle="0"/>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+
+                        <Rectangle Name="MinuteHand" Width="4" Height="230" Fill="Black" Margin="0,0,0,230"
+                           RenderTransformOrigin="0.5,1">
+                            <Rectangle.RenderTransform>
+                                <RotateTransform Angle="0"/>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+
+                        <Rectangle Name="SecondHand" Width="2" Height="240" Fill="Red" Margin="0,0,0,240"
+                           RenderTransformOrigin="0.5,1">
+                            <Rectangle.RenderTransform>
+                                <RotateTransform Angle="0"/>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-50,0,0">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox Name="Hours" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBox Name="Minutes" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBox Name="Seconds" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                            <Button Name="Constructor" Click="Constructor_Click" Background="PaleGreen" Content="Set Time" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Bottom">
+                            <TextBox Name="Secs" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <Button Name="ConstructorSec" Click="ConstructorSec_Click" Background="PaleGreen" Content="Set Time" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Bottom">
+                            <TextBlock Name="ToSecSinceMidnightText" Text="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Button Name="ToSecSinceMidnight" Click="ToSecSinceMidnight_Click" Background="PaleGreen" Content="ToSecSinceMidnight" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <Button Name="AddSecond" Click="AddSecond_Click" Background="PaleGreen" Content="AddSecond" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                        <Button Name="AddMinute" Click="AddMinute_Click" Background="PaleGreen" Content="AddMinute" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                        <Button Name="AddHour" Click="AddHour_Click" Background="PaleGreen" Content="AddHour" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+
+                        <StackPanel VerticalAlignment="Bottom">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBox Name="SecondsAdd" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                            <Button Name="AddSeconds" Click="AddSeconds_Click" Background="PaleGreen" Content="AddSeconds" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Name="DifferenceText" Text="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBox Name="HoursDiff" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBox Name="MinutesDiff" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBox Name="SecondsDiff" MinWidth="40" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                            <Button Name="Difference" Click="Difference_Click" Background="PaleGreen" Content="Difference" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Bottom">
+                            <TextBlock Name="WhatLessonText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Button Name="WhatLesson" Click="WhatLesson_Click" Background="PaleGreen" Content="WhatLesson" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
     </TabControl>
 </Window>
